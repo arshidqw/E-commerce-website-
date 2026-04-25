@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+}
+
+
+ /* ===== NAVBAR ===== */
+.navbar ul {
+  display: flex;                 /* horizontal menu */
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  background: mistyrose;
+  padding: 10px 0;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: blue;
+}
+
+
+
+ .intro {
+  background: #9b7ae0;   /* purple */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  color: #ffd700;
+  margin-bottom: 1rem; /* responsive spacing */
+}
+
+
+.intro p {
+  color: #000;
+}
+
+
+  .box {
+  display: flex;
+   justify-content: space-around; 
+  align-items: center;
+  background: palevioletred;
+  height: 40px;
+} 
+
+.h1-box {
+  background: wheat;
+  padding: 5px;
+}
+
+.h1-box h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+/* Button */
+.btn {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.btn {
+  padding: 7px 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+  /* ===== PRODUCTS AREA ONLY ===== */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* CARD */
+.products .card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.products .card:hover {
+  transform: translateY(-6px);
+}
+
+/* TITLE */
+.products .card h3 {
+  margin-bottom: 6px;
+}
+
+/* ONLY card paragraph */
+.products .card p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ONLY card button */
+.products .card .btn {
+  width: 50%;
+  padding: 10px;
+  background: palevioletred;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* BUTTON HOVER */
+.products .card .btn:hover {
+  background: #d94b74;
+}
+
+/* ANIMATION */
+.products .card .btn.added {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+  .products .card {
+    width: 250px;       /* smaller width */
+    margin: 0 auto;     /* center horizontally */
+  }
+
+  .products {
+    flex-direction: column; /* vertical stack */
+    gap: 16px;              /* spacing between cards */
+  }
+}
+
+/* BIG SCREEN */
+@media (min-width: 768px) {
+  .products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products .card {
+    width: 220px;
+  }
+}
+
+
+    /* ===== FORMS SECTION ===== */
+.forms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+/* FORM CARD */
+.forms-section .form-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 0 auto; /* center */
+}
+
+/* HEADINGS */
+.forms-section h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: palevioletred;
+}
+
+/* LABELS */
+.forms-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* INPUT & TEXTAREA */
+.forms-section input,
+.forms-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.forms-section button {
+  width: 100%;
+  padding: 12px;
+  background: palevioletred;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.forms-section button:hover {
+  background: #d94b74;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .forms-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .forms-section .form-card {
+    margin: 10px;
+  }
+}
+ .button-click {
+   display: flex;
+   justify-content: center;
+   gap: clamp(30px, 8vw, 80px);
+ }
+
+ .on-click {
+   padding: 10px;
+   font-size: 18px;
+   margin: 15px;
+   color: blue;
+ }
+
+ 
+
+ /* =========================
+   DARK MODE (ADD AT END)
+   ========================= */
+
+
+
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+/* NAVBAR */
+body.dark .navbar ul {
+  background: #121212;
+}
+
+body.dark .navbar a {
+  color: #00ff66;
+}
+
+/* INTRO SECTION */
+body.dark .intro {
+  background: #2a2340;
+}
+
+body.dark .intro h2 {
+  color: #ff4d4d;
+}
+
+body.dark .intro p {
+  color: #b36bff;
+}
+
+/* TOP BOX */
+body.dark .box {
+  background: #2b2b2b;
+}
+
+body.dark .h1-box {
+  background: #444;
+}
+
+body.dark .h1-box h1 {
+  color: violet;
+}
+
+/* BUTTONS */
+body.dark .btn {
+  background: #444;
+  color: violet;
+  border: 1px solid #666;
+}
+
+/* PRODUCT CARDS */
+body.dark .products .card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .products .card h3 {
+  color: #ffffff;
+}
+
+body.dark .products .card p {
+  color: #cccccc;
+}
+
+body.dark .products .card .btn {
+  background: #bb4b6b;
+}
+
+/* FORMS */
+body.dark .forms-section .form-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .forms-section label {
+  color: #eaeaea;
+}
+
+body.dark .forms-section input,
+body.dark .forms-section textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .forms-section h2 {
+  color: #ff9dbb;
+}
+
+ /* click */
+body.dark .on-click {
+  background: #121212;
+}
+
+body.dark .on-click {
+  color: #00ff66;
+}
