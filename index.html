@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Sign up</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2>Welcome ecommerce website</h2>
+    <p>Helps users quickly find products by category, price, brand, or rating.</p>
+  </section>
+
+  <section class="box">
+  <div class="h1-box">
+    <h1>E-Commerce</h1>
+  </div>
+    
+    <button class="btn" onclick="toggleTheme()">light / dark</button>
+  </section>
+  
+  <main class="products">
+
+  <section class="card">
+    <h3>Clothes & Shoes</h3>
+    <p class="price">$45</p>
+    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+  </section>
+
+  <section class="card">
+    <h3>Smart Watch</h3>
+    <p class="price">$60</p>
+    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+  </section>
+
+  <section class="card">
+    <h3>Headphones</h3>
+    <p class="price">$30</p>
+    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+  </section>
+
+</main>
+  
+          <!-- SIGN UP FORM -->
+  <section class="forms-section" id="sign-up">
+    <section class="form-card">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="Repeat password" id="Repeat password" name="Repeat password" placeholder="Repeat Password" required>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <!-- CONTACT US FORM -->
+    <section class="form-card" id="contact-us">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </section>
+  
+  <div class="button-click">
+  <button class="on-click">Click me</button>
+    <button class="on-click">Go to page</button>
+  </div>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- 
+  <title>E-Commerce Website</title>
+ 
+</head>
+<body>
+
+  <!-- TOP NAVIGATION --
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- WEBSITE INTRO --
+  <section class="intro">
+    <p>
+      Welcome to our online store. We provide quality products at affordable prices.
+    </p>
+  </section>
+
+  <!-- MAIN CONTENT --
+  <main>
+    <h1>My Online Store</h1>
+
+    <section class="products">
+      <article class="product">
+        <h2>Product 1</h2>
+        <p>Price: $20</p>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product">
+        <h2>Product 2</h2>
+        <p>Price: $30</p>
+        <button>Add to Cart</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER --
+  <footer>
+    <p>© 2025 My Online Store</p>
+  </footer>  -->
